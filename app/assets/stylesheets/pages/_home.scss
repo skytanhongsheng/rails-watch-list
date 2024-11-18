@@ -1,1 +1,177 @@
-// Specific CSS for your home-page
+/* Hero Section */
+.hero-section {
+  background-image: url("https://media.istockphoto.com/id/948667782/photo/cinema-salon-and-red-seats.jpg?s=612x612&w=0&k=20&c=ligfdNfIK1wqf5kkcye4846L4iTpLTYPnx3B8-Nh_4M="); // replace with your image path
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+/* My Lists Section */
+.my-lists {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.classic-movies, .classic-movies-background  {
+  background-image: url("https://media.istockphoto.com/id/623742630/photo/cinema-concept.jpg?s=612x612&w=0&k=20&c=CnLeQzedTdzOQ4_d1V7PPPKyuyDM0aeDUdo0yddBXac="); // replace with your image path
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.superheros {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/6131386715416f7b05a173d2/1631658071006-JHV5QBXBV52YA9SUKSPJ/JLZS.jpeg"
+); // replace with your image path
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: cent
+}
+
+$primary-color: #333;
+$secondary-color: #fff;
+$accent-color: #f39c12;
+$button-color: #28a745;
+$delete-color: #e74c3c;
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $secondary-color;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .header-text {
+        font-size: 24px;
+    }
+
+    .header-movie-count {
+        background-color: $accent-color;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+}
+
+.main-content {
+    margin-top: 20px;
+
+    .movie-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .movie-item {
+            background-color: $secondary-color;
+            border: 1px solid $primary-color;
+            border-radius: 5px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            width: calc(50% - 10px);
+
+            .movie-image {
+                height: 200px;
+                background-size: cover;
+                background-position: center;
+
+                &#godfather-image {
+                    background-image: url('path/to/godfather-image.jpg');
+                }
+
+                &#greenmile-image {
+                    background-image: url('path/to/greenmile-image.jpg');
+                }
+            }
+
+            .movie-details {
+                padding: 15px;
+
+                .movie-title {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                .movie-rating {
+                    font-size: 18px;
+                    color: $accent-color;
+
+                    .star {
+                        color: $accent-color;
+                    }
+                }
+
+                .movie-description {
+                    margin-top: 10px;
+                    font-size: 14px;
+                }
+
+                .movie-comment {
+                    margin-top: 10px;
+                    font-size: 14px;
+                    color: #777;
+                }
+
+                .movie-delete {
+                    margin-top: 10px;
+                    font-size: 14px;
+                    color: $delete-color;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .add-movie-button {
+        margin-top: 20px;
+
+        button {
+            background-color: $button-color;
+            color: $secondary-color;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}
